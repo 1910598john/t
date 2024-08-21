@@ -56,4 +56,11 @@ fetch(`https://api.themoviedb.org/3/discover/movie?with_companies=10342&include_
   };
   
   fetchImageUrls();
-  
+
+  fetch(`https://api.themoviedb.org/3/discover/movie?with_original_language=tl&include_adult=false&language=en`, options)
+  .then(response => response.json())
+  .then(response => {
+    console.log(response);
+  })
+
+  .catch(err => console.error(err));
